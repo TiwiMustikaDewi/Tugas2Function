@@ -55,5 +55,33 @@ cout << "Uang bayar           : Rp. " << bayar << endl;
 cout << "Kembalian            : Rp. " << (bayar - totalharga) << endl;
 }
 
-int main () 
-{
+int main (){
+    int kodemenu, jumlah;
+    double totalharga = 0, bayar, diskon;
+    
+    tampilkanMenu();
+    
+    cout << "\nSilahkan masukkan kode menu (1-7): ";
+    cin >> kodemenu;
+    
+    if ((kodemenu >= 1 && kodemenu <= 4) || (kodemenu >= 5 && kodemenu <= 7)) {
+        cout << "Masukkan jumlah menu: ";
+        cin >> jumlah;
+
+        
+        hitungTotal(totalharga, diskon, kodemenu, jumlah);
+        
+        cout << "Total harga: Rp. " << totalharga + diskon << endl;
+        
+        cout << "Masukkan jumlah uang yang dibayarkan: Rp. ";
+        cin >> bayar;
+        
+        tampilkanStruk(kodemenu, jumlah, totalharga, diskon, bayar);
+        
+    } else {
+        cout << "Maaf, kode menu tidak ditemukan." << endl;
+    }
+    
+    return 0;
+}
+
