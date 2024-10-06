@@ -2,10 +2,10 @@
 using namespace std;
 
 void tampilkanMenu() {
-    string makanan[] = {"Sate Ayam", "Ayam Goreng", "Ayam Geprek", "Ayam Betutu"};
+    string makanan[]      = {"Sate Ayam", "Ayam Goreng", "Ayam Geprek", "Ayam Betutu"};
     double hargaMakanan[] = {25000.0, 15000.0, 10000.0, 30000.0};
     
-    string minuman[] = {"Teh Manis", "Kopi Susu", "Es Jeruk"};
+    string minuman[]      = {"Teh Manis", "Kopi Susu", "Es Jeruk"};
     double hargaMinuman[] = {5000.0, 5000.0, 7000.0};
     
     cout << "----------Kantin Hokage----------" << endl;
