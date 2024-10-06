@@ -27,3 +27,33 @@ void hitungTotal(double &totalharga, double &diskon, int kodemenu, int jumlah) {
     if (kodemenu >= 1 && kodemenu <= 4) {
         totalharga = hargaMakanan[kodemenu - 1] * jumlah;
     } else {
+totalharga = hargaMinuman [kodemenu - 5] * jumlah;
+    }
+
+diskon = totalharga * 0.05;
+    totalharga -= diskon;
+}
+
+void tampilkanStruk (int kodemenu, int jumlah, double totalharga, double diskon, double bayar) {
+    string makanan [] = {"Sate Ayam", "Ayam Goreng", "Ayam Geprek", "Ayam Betutu"};
+    string minuman [] = {"Teh Manis", "Kopi Susu", "Es Jeruk"};
+cout << "----------Struk Pembayaran----------\n";
+cout << "Kode menu : " << kodemenu << endl;
+cout << "Jumlah barang : " << jumlah << endl;
+
+if (kodemenu >= 1 && kodemenu <= 4) {
+cout << "Menu          : " << makanan[kodemenu - 1] << endl;
+}else{
+cout << "Menu          : " << minuman[kodemenu - 5] << endl;
+}
+
+cout << "Total harga          : Rp. " << totalharga+ + diskon << endl;
+cout << "Selamat anda mendapatkan potongan harga up to 5%! << endl;
+cout << "Diskon               : Rp. " << diskon << endl;
+cout << "Harga setelah diskon : Rp. " << totalharga << endl;
+cout << "Uang bayar           : Rp. " << bayar << endl;
+cout << "Kembalian            : Rp. " << (bayar - totalharga) << endl;
+}
+
+int main () 
+{
