@@ -37,6 +37,7 @@ diskon = totalharga * 0.05;
 void tampilkanStruk (int kodemenu, int jumlah, double totalharga, double diskon, double bayar) {
     string makanan [] = {"Sate Ayam", "Ayam Goreng", "Ayam Geprek", "Ayam Betutu"};
     string minuman [] = {"Teh Manis", "Kopi Susu", "Es Jeruk"};
+cout << endl;
 cout << "----------Struk Pembayaran----------\n";
 cout << "Kode menu : " << kodemenu << endl;
 cout << "Jumlah barang : " << jumlah << endl;
@@ -53,12 +54,16 @@ cout << "Diskon               : Rp. " << diskon << endl;
 cout << "Harga setelah diskon : Rp. " << totalharga << endl;
 cout << "Uang bayar           : Rp. " << bayar << endl;
 cout << "Kembalian            : Rp. " << (bayar - totalharga) << endl;
+cout << endl;
+cout << "                       -Terima kasih-                      \n";
 }
 
 int main (){
     int kodemenu, jumlah;
     double totalharga = 0, bayar, diskon;
-    
+    char lagi;
+
+    do {
     tampilkanMenu();
     
     cout << "\nSilahkan masukkan kode menu (1-7): ";
@@ -81,7 +86,8 @@ int main (){
     } else {
         cout << "Maaf, kode menu tidak ditemukan." << endl;
     }
-    
+        cout << "Anda ingin memesan lagi? [Y/N] : ";
+        cin >> lagi;
+  }while (lagi == 'Y' || lagi == 'y');
     return 0;
 }
-
