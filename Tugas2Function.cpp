@@ -48,7 +48,7 @@ cout << "Menu          : " << makanan[kodemenu - 1] << endl;
 cout << "Menu          : " << minuman[kodemenu - 5] << endl;
 }
 
-cout << "Total harga          : Rp. " << totalharga+ + diskon << endl;
+cout << "Total harga          : Rp. " << totalharga + diskon << endl;
 cout << "Selamat anda mendapatkan potongan harga up to 5%!" << endl;
 cout << "Diskon               : Rp. " << diskon << endl;
 cout << "Harga setelah diskon : Rp. " << totalharga << endl;
